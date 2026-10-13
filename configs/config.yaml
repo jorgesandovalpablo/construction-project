@@ -22,7 +22,7 @@ data:
     - "Price_Z"
 
 model:
-  horizon: 30
+  horizon: 130  # ~6 meses de días hábiles (horizonte de despliegue)
   params_lgbm_diario:
     n_estimators: 1500
     learning_rate: 0.05
@@ -37,35 +37,13 @@ model:
     n_jobs: -1
     verbosity: -1
 
-
-features:
-  holiday_impact:
-    positive:
-      - "Navidad"
-      - "Dia de la Madre"
-      - "Carnaval"
-      - "Dia del Trabajo"
-      - "Independencia de Cuenca"
-      - "Fundacion de Quito"
-      - "Mundial"
-      - "Dia de Difuntos"
-    negative:
-      - "Primer dia del ano"
-      - "Traslado"
-      - "Black Friday"
-      - "Cyber Monday"
-      - "Puente"
-      - "Recupero"
-    atypical:
-      - "Terremoto"
-
 lags:
   max_lag: 365
   max_rolling: 90
 
 training:
-  test_size_weeks: 8
-  n_folds: 5
+  test_horizon_days: 130   # test recursivo = horizonte de despliegue (6 meses)
+  n_folds: 3               # walk-forward expanding, folds no solapados
   weight_value: 5
 
 # optuna:
