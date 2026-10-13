@@ -17,7 +17,7 @@ def set_global_seed(seed: int = 21) -> None:
         - LightGBM (vía parámetro random_state)
 
     Parámetros:
-        seed: valor del seed (default: 42)
+        seed: valor del seed (default: 21)
               debe coincidir con config.yaml
     """
     random.seed(seed)
