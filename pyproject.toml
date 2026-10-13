@@ -18,5 +18,6 @@ dependencies = [
     "matplotlib",
     "seaborn",
     "Jinja2",
-    "statsmodels"
+    "statsmodels",
+    "lightgbm"
 ]
