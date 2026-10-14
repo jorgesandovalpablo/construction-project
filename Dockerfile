@@ -1,7 +1,7 @@
 # Imagen de la solución: API del agente (default) o batch de proyección.
 # Entrypoints:
-#   API:   docker run -e OPENAI_API_KEY=... -p 8000:8000 <img>
-#   Batch: docker run -e OPENAI_API_KEY=... <img> python -m src.models.forecast
+#   API:   docker run -e GOOGLE_API_KEY=... -p 8000:8000 <img>
+#   Batch: docker run <img> python -m src.models.forecast
 FROM python:3.12-slim
 
 WORKDIR /app

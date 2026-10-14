@@ -36,7 +36,6 @@ _METRICS = {
     ],
 }
 
-
 def get_projection(target: str, month: str = None) -> dict:
     if not PROJ_PATH.exists():
         return {"error": f"No existe {PROJ_PATH}; ejecuta: python -m src.models.forecast"}
@@ -63,10 +62,8 @@ def get_projection(target: str, month: str = None) -> dict:
             out["series_diaria"] = serie
     return out
 
-
 def get_metrics() -> dict:
     return _METRICS
-
 
 def execute_tool(name: str, args: dict) -> dict:
     if name == "get_projection":
