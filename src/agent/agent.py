@@ -26,9 +26,9 @@ class CostAgent:
     """Agente conversacional Gemini con AFC (una llamada generate_content por turno)."""
 
     def __init__(self):
-        self.client = genai.Client()  # lee GOOGLE_API_KEY
-        self.model = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
-        self._chats: dict = {}  # session_id -> chat (historial interno del SDK)
+        self.client = genai.Client()  
+        self.model = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
+        self._chats: dict = {}  
         self._tools_used: list[str] = []
 
     def tool_get_projection(self, target: str, month: str = None) -> dict:
