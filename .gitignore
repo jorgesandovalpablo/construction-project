@@ -227,3 +227,5 @@ data/predictions/
 #logs
 logs/
 
+#models artiact
+/models/
