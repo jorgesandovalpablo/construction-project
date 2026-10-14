@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import lightgbm as lgb
-
 from src.utils.config import config
 
 TARGETS = [config["data"]["target1"], config["data"]["target2"]]
