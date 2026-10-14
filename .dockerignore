@@ -1,0 +1,11 @@
+venv/
+.venv/
+.git/
+mlruns/
+logs/
+notebooks/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+.pytest_cache/
